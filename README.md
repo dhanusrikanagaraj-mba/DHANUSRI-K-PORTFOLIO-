@@ -1,4 +1,4 @@
-🌐 Dhanusri K | Personal Portfolio
+**🌐 Dhanusri K | Personal Portfolio**
 
 Welcome to my personal portfolio website. This project showcases my skills, education, projects, and professional journey as a developer through a clean and modern web design.
 
@@ -23,6 +23,7 @@ profile.jpg
 🌍 Live Repository
 
 GitHub Project Link:
+
 👉 https://github.com/dhanusrikanagaraj-mba/DHANUSRI-K-PORTFOLIO-
 
 🎯 Purpose
@@ -33,9 +34,12 @@ Showcase my personal and technical skills
 Build a professional online portfolio
 Share my projects with recruiters and collaborators
 Improve my front-end development skills
+
 📬 Contact
 📧 Email: DHANUSRIKANAGARAJ@GMAIL.COM
-💻 GitHub: https://github.com/dhanusrikanagaraj-mba
-⭐ Closing Note
 
+💻 GitHub: https://github.com/dhanusrikanagaraj-mba
+
+
+⭐ Closing Note
 Thank you for visiting my portfolio project. I am continuously learning and improving my skills to build better and more creative web applications.
