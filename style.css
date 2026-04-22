@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(2, 6, 23, 0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav h2 {
+    color: #22c55e;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #22c55e;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 20px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text h3 {
+    color: #22c55e;
+    margin: 10px 0;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.btn {
+    background: rgba(34,197,94,0.8);
+    color: black;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #22c55e;
+    transform: scale(1.05);
+}
+
+/* PROFILE IMAGE CONTAINER */
+.hero-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GLOW RING */
+.hero-img::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #22c55e, #38bdf8, #a78bfa);
+    filter: blur(20px);
+    opacity: 0.6;
+    z-index: 0;
+    animation: rotateGlow 6s linear infinite;
+}
+
+/* PROFILE IMAGE */
+.hero-img img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+
+    border: 4px solid rgba(255,255,255,0.2);
+
+    box-shadow: 
+        0 0 20px rgba(34,197,94,0.5),
+        0 0 40px rgba(56,189,248,0.3);
+
+    animation: float 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* GLOW ROTATION */
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* SECTIONS */
+section {
+    padding: 60px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* CARDS */
+.card, .box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover, .box:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255,255,255,0.1);
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* LINKS */
+a {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(2,6,23,0.7);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SCROLL ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+}
